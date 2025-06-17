@@ -1,0 +1,45 @@
+.app {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  padding-bottom: 168px; /* Space for the assistant widget */
+
+  @media screen and (max-height: 900px) {
+    padding-bottom: 160px; /* Увеличенный отступ для низких экранов */
+  }
+
+  @media screen and (max-height: 800px) {
+    padding-bottom: 160px; /* Еще больший отступ для очень низких экранов */
+  }
+}
+
+/* SberBox (1920x1080) */
+@media screen and (width: 1920px) and (height: 1080px) {
+  .app {
+    padding-bottom: 160px;
+    font-size: 1.2rem;
+  }
+}
+
+/* SberPortal (1280x800) */
+@media screen and (width: 1280px) and (height: 800px) {
+  .app {
+    padding-bottom: 280px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Мобильные устройства - портретная ориентация */
+@media screen and (max-width: 768px) {
+  .app {
+    padding-bottom: 160px;
+    font-size: 1rem;
+  }
+}
+
+/* Мобильные устройства - ландшафтная ориентация */
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .app {
+    padding-bottom: 200px;
+  }
+}

@@ -1,0 +1,103 @@
+.mobileMenu {
+  display: none;
+  width: 100%;
+  background: var(--panel-background);
+  border-radius: 1rem;
+  overflow: visible;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 1rem 1rem 0 0;
+  background: rgba(255, 255, 255, 0);
+
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &.active {
+    background: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+		border-radius: 1rem 1rem 0 0;
+  }
+}
+
+.content {
+  height: auto;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+}
+
+.help {
+  padding-bottom: 2rem;
+
+  h3 {
+    margin: 1.5rem 0 0.75rem;
+    color: var(--text);
+    font-size: 1.1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin: 0.75rem 0;
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+
+  ul {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    padding-right: 1rem;
+  }
+}
+
+.warning {
+  background-color: rgba(255, 87, 34, 0.1);
+  border-left: 4px solid #ff5722;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #ff5722;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

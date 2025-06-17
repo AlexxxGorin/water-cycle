@@ -1,0 +1,1 @@
+export { SberAssistant } from './SberAssistant';
